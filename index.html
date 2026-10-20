@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Dead / Disturbia Clone</title>
+
+    <!-- 1. AÑADIDO: Importamos la fuente gótica desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN para prototipado rápido) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración de Tailwind para estética Dark Streetwear -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                        mono: ['"Courier New"', 'monospace'],
+                        // 2. AÑADIDO: Le decimos a Tailwind que ahora existe la clase "font-gothic"
+                        gothic: ['"Pirata One"', 'cursive'], 
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        accent: '#ff003c', /* Un rojo agresivo estilo Drop Dead */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- React, ReactDOM y Babel (CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-dark text-white font-sans antialiased">
+    <!-- Contenedor donde React montará la aplicación -->
+    <div id="root"></div>
+
+    <!-- Script de React -->
+    <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
